@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://unpkg.com/vue"></script>
+  
+  <div id="app">
+    <input v-model="input" v-on:keyup.enter="send"/>
+    <div v-for="msg in messages">
+      {{ msg }}
+    </div>
+  </div>
+
+  <script src="07-websockets.js"></script>
+</html>
