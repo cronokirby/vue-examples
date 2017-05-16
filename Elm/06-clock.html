@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script> 
+  
+  <div id="app">
+    <svg viewBox="0 0 100 100" width="300px">
+      <circle cx="50" cy="50" r="45" fill="#0B79CE"></circle>
+      <line x1="50" y1="50" 
+            v-bind:x2="handX" v-bind:y2="handY"
+            stroke="#000000"></line>
+    </svg>
+    <button v-on:click="start"></button>
+  </div>
+
+  <script src="06-clock.js"></script>
+</html>
