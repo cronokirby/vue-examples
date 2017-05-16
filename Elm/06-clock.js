@@ -11,24 +11,21 @@ new Vue({
         return 50 + 40 * Math.sin(this.angle)
       }
     },
-    methods: {
-      start: function () {
-        console.log("starting")
-        var vm = this
-        var tween = new TWEEN.Tween({x: 0})
-          .to({x: 60}, 60000) 
-          .onUpdate(function() {
-            // second => degree => radians
-            vm.angle = Math.floor(this.x) * Math.PI / 30 
-          })
-          .repeat(Infinity)
-          .start()
+    created: function () {
+      var vm = this
+      var tween = new TWEEN.Tween({x: 0})
+        .to({x: 60}, 60000) 
+        .onUpdate(function() {
+          // second => degree => radians
+          vm.angle = Math.floor(this.x) * Math.PI / 30 
+        })
+        .repeat(Infinity)
+        .start()
 
-        function animate(time) {
-          requestAnimationFrame(animate)
-          TWEEN.update(time)
-        }
+      function animate(time) {
         requestAnimationFrame(animate)
+        TWEEN.update(time)
       }
+      requestAnimationFrame(animate)
     }
 })
