@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <div id="app">
+    <h2>{{ topic }}</h2>
+    <button v-on:click="newgif"> More Please! </button>
+    <p>
+      {{ loading }}
+    </p>
+    <br/>
+    <img v-bind:src="gif"/>
+  </div>
+
+  <script src="05-http.js"></script>
+</html>

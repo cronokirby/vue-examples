@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://unpkg.com/vue"></script>
+
+  <div id="app">
+    <input v-model="name" placeholder="Name"/>
+    <input v-model="password" type="password"
+           placeholder="Password"/>
+    <input v-model="passwordAgain" type="password"
+           placeholder="Re-enter Password"/>
+    <div v-bind:style="validation.style">
+      {{ validation.text }}
+    </div>
+  </div>
+
+  <script src="03-form.js"></script>
+</html>
