@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://unpkg.com/vue"></script>
+
+  <div id="app">
+    <my-button v-on:toggle="clicks += 1"></my-button>
+    <p>Button has been toggled {{ clicks }} times</p>
+  </div>
+
+  <script src="button.js"></script>
+</html>
